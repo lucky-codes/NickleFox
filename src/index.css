@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.hide-scrollbar::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar */
+  }
+  .text-shadow-arrivals {
+    text-shadow: 0 6px 0 rgb(255, 221, 0); /* Solid yellow shadow */
+  }
+  .select:hover {
+       cursor: pointer;
+       padding: 5px;
+       color : white;
+       background-color: black;
+       border: 1px solid blue;
+       border-radius: 10px;
+  }
+  .no-scroll{
+    overflow: hidden;
+  }
