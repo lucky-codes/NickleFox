@@ -3,7 +3,7 @@ import logo from "../assets/Logo.png";
 import { DataContext } from "../context/UserContex";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import ReCAPTCHA from "react-google-recaptcha"; 
+import ReCAPTCHA from "react-google-recaptcha";
 const Login = () => {
   const { setUser } = useContext(DataContext);
   const [recaptchaToken, setRecaptchaToken] = useState(null);
@@ -37,14 +37,13 @@ const Login = () => {
   const handleChange = (e) => {
     const { value, name } = e.target;
     setData((prev) => ({ ...prev, [name]: value }));
-    handleError();
   };
   const handleRecaptcha = (value) => {
-    setRecaptchaToken(value); 
+    setRecaptchaToken(value);
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    handleError()
+    handleError();
     if (validation) {
       alert("Please enter all fields correctly");
       return;
@@ -54,7 +53,8 @@ const Login = () => {
       return;
     }
     try {
-      const response = await axios.post(`${import.meta.env.VITE_API_URL}login`,
+      const response = await axios.post(
+        `${import.meta.env.VITE_API_URL}login`,
         { ...data, recaptchaToken }
       );
       if (response.status === 200) {
@@ -62,7 +62,7 @@ const Login = () => {
         setUser(response.data.user);
         navigate("/");
       } else {
-        alert("Invalid Credentials")
+        alert("Invalid Credentials");
         throw new Error("Invalid credentials");
       }
     } catch (error) {
@@ -101,6 +101,7 @@ const Login = () => {
               value={data.email}
               name="email"
               onChange={handleChange}
+              onFocus={handleError}
               required
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
               placeholder="Enter your email"
@@ -122,6 +123,7 @@ const Login = () => {
               value={data.password}
               name="password"
               onChange={handleChange}
+              onFocus={handleError}
               required
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
               placeholder="Enter your password"
@@ -131,10 +133,9 @@ const Login = () => {
             )}
           </div>
           <ReCAPTCHA
-            sitekey= {import.meta.env.VITE_reCaptcha}
+            sitekey={import.meta.env.VITE_reCaptcha}
             onChange={handleRecaptcha}
           />
-
 
           <div className="text-right">
             <Link
