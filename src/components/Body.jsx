@@ -41,7 +41,7 @@ const Body = () => {
         <>
           <div
             ref={modelRef}
-            className="bg-white absolute  top-[10%] left-[30%] rounded-lg shadow-lg shadow-black overflow-hidden z-20 w-[700px] h-[600px]"
+            className="bg-white absolute model  top-[10%] left-[30%] rounded-lg shadow-lg shadow-black overflow-hidden z-20 w-[700px] h-[600px]"
           >
             <SideBarProfile />
           </div>

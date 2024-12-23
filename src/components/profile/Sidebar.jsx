@@ -32,13 +32,13 @@ const SideBarProfile = () => {
       <div className="flex flex-col w-full h-full items-center bg-gray-800 text-white border-r border-gray-700">
         <div className="w-full flex flex-col gap-6 py-10 px-4 h-full">
           <button
-            className="py-3 px-4 rounded-lg bg-gray-700 hover:bg-green-700 transition-all text-sm font-bold duration-300 ease-in-out"
+            className="py-3 px-4 rounded-lg bg-gray-700 hover:bg-green-700 transition-all sidebar_button text-sm font-bold duration-300 ease-in-out"
             onClick={() => onButtonClick("account")}
           >
             YOUR ACCOUNT
           </button>
           <button
-            className="py-3 px-4 rounded-lg bg-gray-700 hover:bg-green-700 transition-all text-sm font-bold duration-300 ease-in-out"
+            className="py-3 px-4 rounded-lg bg-gray-700 sidebar_button hover:bg-green-700 transition-all text-sm font-bold duration-300 ease-in-out"
             onClick={() => onButtonClick("edit")}
           >
             Edit Profile
@@ -50,7 +50,7 @@ const SideBarProfile = () => {
             Change Password
           </button> */}
           <button
-            className="py-3 px-4 rounded-lg bg-gray-700 hover:bg-green-700 transition-all text-sm font-bold duration-300 ease-in-out"
+            className="py-3 px-4 rounded-lg bg-gray-700 sidebar_button hover:bg-green-700 transition-all text-sm font-bold duration-300 ease-in-out"
             onClick={handleLogout}
           >
             Logout

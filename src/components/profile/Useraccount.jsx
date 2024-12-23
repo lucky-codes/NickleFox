@@ -29,7 +29,7 @@ const Useraccount = () => {
     <div className="w-full h-full p-8 bg-white rounded-lg shadow-md">
       {user ? (
         <div className="flex flex-col items-center gap-6">
-          <div className="w-32 h-32 rounded-full bg-gray-300 overflow-hidden shadow-md">
+          <div className="w-32 h-32 useracc_img rounded-full bg-gray-300 overflow-hidden shadow-md">
             <img
               src="https://imgv3.fotor.com/images/gallery/a-man-profile-picture-with-blue-and-green-background-made-by-LinkedIn-Profile-Picture-Maker.jpg"
               alt="User Avatar"
@@ -37,7 +37,7 @@ const Useraccount = () => {
             />
           </div>
           <div className="text-center">
-            <h2 className="text-xl font-bold text-gray-800">
+            <h2 className="text-xl useracc_header font-bold text-gray-800">
               {user.firstName} {user.lastName}
             </h2>
             <p className="text-sm text-gray-600">{user.email}</p>

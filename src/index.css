@@ -93,8 +93,69 @@
   }
 
   .model_container {
-    width: 700px;
+    width: auto;
+    height: 550px;
   }
+  .profile_cont{
+    height: 500px;
+  }
+  .font{
+    font-size: 14px;
+  }
+  .profile_head{
+    font-size: 18px;
+  }
+  .model{
+    left :10%;
+    top: 5%;
+    height: 550px;
+
+  }
+  .sidebar_button{
+    font-size: 10px;
+  }
+  .useracc_header{
+    font-size: 15px;
+  }
+  .useracc_img{
+    width: 40px;
+    height: 40px;
+  }
+  .footer_cont2{
+    height: 400px;
+  }
+  .footer_text2 .sub{
+     font-size: 30px;
+  }
+  .footer_text2 .sub2{
+    font-size: 15px;
+  }
+  .footer_text2{
+    margin-left: 50px;
+  }
+  .footer_img{
+    width: 40px;
+    height: 40px;
+  }
+  .footer_link_cont{
+    margin-right: 50px;
+    gap: 40px;
+  }
+  .footer_subheading{
+   font-size: 20px;
+  }
+
+  .mobile_container{
+    width: 500px;
+    margin-left: 50px;
+   }
+   .mobile_img{
+     height: 500px;
+   }
+   .store_img{
+     width: 180px;
+     height: 60px;
+   }
 }
 @media screen and (max-width: 1440px) {
   .sale_page {
@@ -160,10 +221,67 @@
     .burger-button {
       display: block;
     }
+    .mobile_container{
+     width: 400px;
+     margin-left: 50px;
+    }
+    .mobile_img{
+      height: 400px;
+    }
+    .store_img{
+      width: 150px;
+      height: 50px;
+    }
+    .footer_text{
+      font-size: 40px;
+    }
+    .subfooter_text{
+      font-size: 22px;
+    }
+    .footer_input{
+      width: 500px;
+    }
+    .footer_input input{
+       width: 500px;
+       height: 60px;
+    }
+    .footer_button{
+      right: 1%;
+      top: 7%;
+      width: 130px;
+      height: 50px;
+    }
+    .footer_cont1{
+      height: 400px;
+    }
+    .footer_cont2{
+      height: 400px;
+    }
+    .footer_text2 .sub{
+       font-size: 30px;
+    }
+    .footer_text2 .sub2{
+      font-size: 15px;
+    }
+    .footer_text2{
+      margin-left: 50px;
+    }
+    .footer_img{
+      width: 40px;
+      height: 40px;
+    }
+    .footer_link_cont{
+      margin-right: 50px;
+      gap: 40px;
+    }
+    .footer_subheading{
+     font-size: 20px;
+    }
   }
   @media screen and (min-width: 769px) {
     .burger-button {
       display: none;
     }
   }
+
 }

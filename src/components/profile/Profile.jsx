@@ -56,12 +56,12 @@ const Profile = () => {
   };
 
   return (
-    <div className="w-full h-[500px] overflow-y-auto max-w-md mx-8 mt-10 p-6 bg-white rounded-lg shadow-md">
-      <h2 className="text-xl font-semibold text-gray-800 mb-4">Edit Profile</h2>
+    <div className="w-full h-[500px] profile_cont overflow-y-auto max-w-md mx-8 mt-10 p-6 bg-white rounded-lg shadow-md">
+      <h2 className="text-xl profile_head font-semibold text-gray-800 mb-4">Edit Profile</h2>
       <form>
         <div className="mb-4">
           <label
-            className="block text-gray-700 font-medium mb-2"
+            className="block text-gray-700 font font-medium mb-2"
             htmlFor="firstName"
           >
             First Name
@@ -78,7 +78,7 @@ const Profile = () => {
 
         <div className="mb-4">
           <label
-            className="block text-gray-700 font-medium mb-2"
+            className="block text-gray-700 font font-medium mb-2"
             htmlFor="lastName"
           >
             Last Name
@@ -95,7 +95,7 @@ const Profile = () => {
 
         <div className="mb-4">
           <label
-            className="block text-gray-700 font-medium mb-2"
+            className="block text-gray-700 font font-medium mb-2"
             htmlFor="phone"
           >
             Phone
@@ -113,7 +113,7 @@ const Profile = () => {
 
         <div className="mb-4">
           <label
-            className="block text-gray-700 font-medium mb-2"
+            className="block text-gray-700 font font-medium mb-2"
             htmlFor="address"
           >
             Address
@@ -130,7 +130,7 @@ const Profile = () => {
 
         <div className="mb-4">
           <label
-            className="block text-gray-700 font-medium mb-2"
+            className="block text-gray-700 font font-medium mb-2"
             htmlFor="city"
           >
             City
@@ -147,7 +147,7 @@ const Profile = () => {
 
         <div className="mb-4">
           <label
-            className="block text-gray-700 font-medium mb-2"
+            className="block text-gray-700 font font-medium mb-2"
             htmlFor="state"
           >
             State
