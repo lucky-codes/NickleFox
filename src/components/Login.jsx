@@ -3,8 +3,10 @@ import logo from "../assets/Logo.png";
 import { DataContext } from "../context/UserContex";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import ReCAPTCHA from "react-google-recaptcha"; 
 const Login = () => {
   const { setUser } = useContext(DataContext);
+  const [recaptchaToken, setRecaptchaToken] = useState(null);
   const navigate = useNavigate();
   const [data, setData] = useState({
     email: "",
@@ -37,14 +39,23 @@ const Login = () => {
     setData((prev) => ({ ...prev, [name]: value }));
     handleError();
   };
+  const handleRecaptcha = (value) => {
+    setRecaptchaToken(value); 
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (validation) {
       alert("Please enter all fields correctly");
       return;
     }
+    if (!recaptchaToken) {
+      alert("Please complete the reCAPTCHA verification.");
+      return;
+    }
     try {
-      const response = await axios.post(`${import.meta.env.VITE_API_URL}login`,data);
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}login`,
+        { ...data, recaptchaToken }
+      );
       if (response.status === 200) {
         localStorage.setItem("token", response.data.token);
         setUser(response.data.user);
@@ -117,6 +128,11 @@ const Login = () => {
               <p className="text-red-500 text-sm">{validation.password}</p>
             )}
           </div>
+          <ReCAPTCHA
+            sitekey= {import.meta.env.VITE_reCaptcha}
+            onChange={handleRecaptcha}
+          />
+
 
           <div className="text-right">
             <Link

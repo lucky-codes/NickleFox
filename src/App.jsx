@@ -6,11 +6,12 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 import PrivateRoutes from "./private/PrivateRoutes";
 const App = () => {
+   const token = localStorage.getItem("token")
   return (
     <div className="overflow-hidden">
       <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={token?<Body/>:<Login />} />
+        <Route path="/signup" element={token?<Body/>:<Signup />} />
         <Route
           path="/"
           element={

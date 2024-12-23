@@ -28,7 +28,7 @@ const SideBarProfile = () => {
   };
 
   return (
-    <div className="grid profileEdit2 grid-cols-[20%_80%] bg-gray-100 text-black/85 w-[900px] rounded-lg h-[700px] shadow-lg">
+    <div className="grid profileEdit2 grid-cols-[20%_80%] bg-gray-100 text-black/85 w-[900px] model_container rounded-lg h-[700px] shadow-lg">
       <div className="flex flex-col w-full h-full items-center bg-gray-800 text-white border-r border-gray-700">
         <div className="w-full flex flex-col gap-6 py-10 px-4 h-full">
           <button

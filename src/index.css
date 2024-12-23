@@ -2,19 +2,168 @@
 @tailwind components;
 @tailwind utilities;
 .hide-scrollbar::-webkit-scrollbar {
-    display: none; /* Hide the scrollbar */
+  display: none; 
+}
+.text-shadow-arrivals {
+  text-shadow: 0 6px 0 rgb(255, 221, 0); 
+}
+.burger-button {
+  display: none;
+}
+.select:hover {
+  cursor: pointer;
+  padding: 5px;
+  color: white;
+  background-color: black;
+  border: 1px solid blue;
+  border-radius: 10px;
+}
+.no-scroll {
+  overflow: hidden;
+}
+@media screen and (max-width: 1443px) {
+  .sale_img {
+    height: 500px;
   }
-  .text-shadow-arrivals {
-    text-shadow: 0 6px 0 rgb(255, 221, 0); /* Solid yellow shadow */
+  .sale_container {
+    height: 500px;
   }
-  .select:hover {
-       cursor: pointer;
-       padding: 5px;
-       color : white;
-       background-color: black;
-       border: 1px solid blue;
-       border-radius: 10px;
+  .sale_page {
+    right: 6%;
+    width: 400px;
   }
-  .no-scroll{
-    overflow: hidden;
+  .text {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
   }
+
+  .sale_page1 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .sale_page_data {
+    width: 300px;
+    overflow: visible;
+  }
+
+  .text {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .sale_page > h1 {
+    font-size: 50px;
+  }
+  .sale_page_data > p {
+    font-size: 20px;
+  }
+  .sale_page_data2 {
+    font-size: 21px;
+  }
+  .sale_button {
+    width: 150px;
+    height: 60px;
+  }
+  .landingpage_img {
+    height: 300px;
+    width: 300px;
+  }
+  .landingpage_heading {
+    font-size: 44px;
+  }
+  .landingpage_heading_container {
+    left: 8%;
+    width: 300px;
+  }
+  .landingpage_img_container {
+    left: 50%;
+  }
+  .landing_cont {
+    height: 600px;
+  }
+  .landingpage_button {
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .star {
+    display: none;
+  }
+
+  .model_container {
+    width: 700px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .sale_page {
+    right: 5%;
+  }
+
+  @media screen and (max-width: 768px) {
+    .navbar-menu {
+      display: none;
+    }
+    .landingpage_heading_container {
+      left: 6%;
+      width: 200px;
+    }
+    .landingpage_button {
+      width: 100px;
+      height: 35px;
+      font-size: 18px;
+    }
+    .landing_cont {
+      height: 400px;
+    }
+    .sale_img {
+      height: 400px;
+    }
+    .sale_page {
+      right: 3%;
+      width: 300px;
+    }
+    .sale_page > h1 {
+      font-size: 30px;
+    }
+    .sale_page_data > p {
+      font-size: 14px;
+    }
+    .sale_page_data2 {
+      font-size: 15px;
+    }
+    .sale_container {
+      height: 400px;
+    }
+    .navbar-menu.active {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      background: white;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      z-index: 50;
+    }
+    .landingpage_img {
+      height: 200px;
+      width: 200px;
+    }
+    .landingpage_heading {
+      font-size: 24px;
+    }
+
+    .burger-button {
+      display: block;
+    }
+  }
+  @media screen and (min-width: 769px) {
+    .burger-button {
+      display: none;
+    }
+  }
+}
