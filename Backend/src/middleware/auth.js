@@ -4,7 +4,6 @@ const Usermodel = require("../Models/user");
 const authMiddleware = async (req, res, next) => {
   try {
     const authHeader = req.header("Authorization");
-    console.log("Authorization Header:", authHeader);
 
     if (!authHeader || !authHeader.startsWith("Bearer ")) {
       return res
@@ -22,7 +21,6 @@ const authMiddleware = async (req, res, next) => {
     // Verify the token
     const secret = process.env.SECRET_KEY;
     const decoded = jwt.verify(token, secret);
-    console.log("Decoded Token:", decoded);
 
     const user = await Usermodel.findById(decoded._id);
     if (!user) {
