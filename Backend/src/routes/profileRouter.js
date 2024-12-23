@@ -16,8 +16,8 @@ profileouter.get("/profile/view", authMiddleware, async (req, res) => {
 });
 profileouter.patch("/profile/edit", authMiddleware, async (req, res) => {
   try {
-    // console.log("Logged-in User:", req.user);  
-    // console.log("Edit User:", req.body);  
+    console.log("Logged-in User:", req.user);  
+    console.log("Edit User:", req.body);  
 
     if (!validateEditProfile(req)) {
       throw new Error("Invalid Edit");

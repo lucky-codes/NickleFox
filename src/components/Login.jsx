@@ -68,7 +68,7 @@ const Login = () => {
       }
     } catch (error) {
       alert("Invalid Credentials");
-      window.location.reload()
+      window.location.reload();
       console.log({ error });
     }
   };
@@ -134,7 +134,7 @@ const Login = () => {
             )}
           </div>
           <ReCAPTCHA
-            sitekey={import.meta.env.VITE_reCaptcha}
+            sitekey={import.meta.env.VITE_reCaptcha_key}
             onChange={handleRecaptcha}
           />
 
@@ -149,6 +149,7 @@ const Login = () => {
 
           <button
             type="submit"
+            disabled={!recaptchaToken}
             onClick={handleSubmit}
             className="w-full py-3 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           >
