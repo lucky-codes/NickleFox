@@ -25,7 +25,7 @@ connectDB()
   .catch((error) => {
     console.error("Error Found database not connected");
   });
-  
+
   app.post('/verifyCap', async (req, res) => {
     const captchaValue = req.body.capVal; 
     try {
@@ -34,7 +34,7 @@ connectDB()
         );
         res.status(200).json({
             "message": data
-        }) // Send back the reCAPTCHA verification data
+        }) 
     } catch (error) {
         console.error(error);
         res.status(500).json({
