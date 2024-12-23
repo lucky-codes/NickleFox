@@ -47,7 +47,7 @@ const Useraccount = () => {
             <h3 className="text-lg font-semibold text-gray-700 mb-4">
               Profile Details
             </h3>
-            <div className="flex flex-col gap-4 text-left">
+            <div className="flex flex-col gap-4 overflow-y-auto hide-scrollbar shadow-lg rounded-md h-[250px] mr-[100px] p-2 border text-left">
               <div>
                 <span className="font-semibold text-gray-800">First Name:</span>
                 <span className="ml-2 text-gray-600">{user.firstName}</span>
