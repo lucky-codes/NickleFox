@@ -7,8 +7,8 @@ import axios from "axios";
 const SideBarProfile = () => {
   const navigate = useNavigate();
   const [choice, setChoice] = useState({
-    account: false,
-    edit: true,
+    account: true,
+    edit: false,
     password: false,
   });
   const onButtonClick = (select) => {
@@ -17,7 +17,9 @@ const SideBarProfile = () => {
   const handleLogout = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`${import.meta.env.VITE_API_URL}logout`);
+      const response = await axios.post(
+        `${import.meta.env.VITE_API_URL}logout`
+      );
       if (response.status === 200) {
         localStorage.removeItem("token");
         navigate("/login");

@@ -1,4 +1,3 @@
-This project is a user authentication and profile management system where:
 
 New users can sign up.
 
