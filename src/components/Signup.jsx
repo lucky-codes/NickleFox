@@ -27,6 +27,7 @@ const Signup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    handleError({ data, setValidation });
     if (data.password !== data.confirmPassword) {
       alert("Password does not match");
       return;

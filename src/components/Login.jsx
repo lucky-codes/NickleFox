@@ -44,6 +44,7 @@ const Login = () => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
+    handleError()
     if (validation) {
       alert("Please enter all fields correctly");
       return;
@@ -61,6 +62,7 @@ const Login = () => {
         setUser(response.data.user);
         navigate("/");
       } else {
+        alert("Invalid Credentials")
         throw new Error("Invalid credentials");
       }
     } catch (error) {
