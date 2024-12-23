@@ -16,18 +16,23 @@ const Profile = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
+    if (value !== undefined) {
+      setFormData((prevData) => ({
+        ...prevData,
+        [name]: value,
+      }));
+    }
   };
 
   const handleSave = async (e) => {
     e.preventDefault();
+    const cleanedData = Object.fromEntries(
+      Object.entries(formData).filter(([_, value]) => value != null)
+    );  
     try {
       const res = await axios.patch(
         ` ${import.meta.env.VITE_API_URL}profile/edit`,
-        formData,
+        cleanedData,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -57,7 +62,9 @@ const Profile = () => {
 
   return (
     <div className="w-full h-[500px] profile_cont overflow-y-auto max-w-md mx-8 mt-10 p-6 bg-white rounded-lg shadow-md">
-      <h2 className="text-xl profile_head font-semibold text-gray-800 mb-4">Edit Profile</h2>
+      <h2 className="text-xl profile_head font-semibold text-gray-800 mb-4">
+        Edit Profile
+      </h2>
       <form>
         <div className="mb-4">
           <label

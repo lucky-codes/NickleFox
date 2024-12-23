@@ -3,8 +3,11 @@ import logo from "../assets/Logo.png";
 import { DataContext } from "../context/UserContex";
 
 const Navbar = () => {
-  const { setModel } = useContext(DataContext);
-  const [isMenuOpen, setIsMenuOpen] = useState(false); 
+  const { setModel, setIsMenuOpen, isMenuOpen } = useContext(DataContext);
+  const handleModel = () => {
+    setModel(true);
+    setIsMenuOpen(false);
+  };
 
   return (
     <div className="flex justify-between p-5 relative">
@@ -30,7 +33,7 @@ const Navbar = () => {
         <p className="text-xl font-semibold select">FAVOURITE</p>
         <p className="text-xl font-semibold select">LIFESTYLE</p>
         <button
-          onClick={() => setModel(true)}
+          onClick={handleModel}
           className="text-[18px] font-semibold bg-black w-[100.5px] h-[46.5px] rounded-[5.25px] text-white"
         >
           Profile

@@ -3,6 +3,7 @@ import { createContext } from "react";
 export const DataContext = createContext();
 const UserContex = ({ children }) => {
   const [model, setModel] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false); 
   const [signupData, setSignupData] = useState({
     firstName: "",
     lastName: "",
@@ -18,6 +19,8 @@ const UserContex = ({ children }) => {
   const value = {
     model,
     setModel,
+    isMenuOpen,
+    setIsMenuOpen,
     signupData,
     setSignupData,
     user,
