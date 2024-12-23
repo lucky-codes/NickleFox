@@ -19,12 +19,12 @@ const Login = () => {
     const password_regex =
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})/;
     if (!data.email.trim()) {
-      error.email = "Field is required";
+      error.email = "Email field is required";
     } else if (!email_regex.test(data.email)) {
       error.email = "Invalid Email";
     }
     if (!data.password.trim()) {
-      error.password = "Field is required";
+      error.password = "Password field is required";
     } else if (!password_regex.test(data.password)) {
       error.password = "Invalid Password";
     }
@@ -37,6 +37,7 @@ const Login = () => {
   const handleChange = (e) => {
     const { value, name } = e.target;
     setData((prev) => ({ ...prev, [name]: value }));
+    handleError();
   };
   const handleRecaptcha = (value) => {
     setRecaptchaToken(value);
@@ -66,6 +67,8 @@ const Login = () => {
         throw new Error("Invalid credentials");
       }
     } catch (error) {
+      alert("Invalid Credentials");
+      window.location.reload()
       console.log({ error });
     }
   };
@@ -101,7 +104,6 @@ const Login = () => {
               value={data.email}
               name="email"
               onChange={handleChange}
-              onFocus={handleError}
               required
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
               placeholder="Enter your email"
@@ -123,7 +125,6 @@ const Login = () => {
               value={data.password}
               name="password"
               onChange={handleChange}
-              onFocus={handleError}
               required
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
               placeholder="Enter your password"
