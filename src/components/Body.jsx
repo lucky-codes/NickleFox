@@ -7,8 +7,7 @@ import Favourite from "./Favourite";
 import Mobileapp from "./Mobileapp";
 import Footer from "./Footer";
 import { DataContext } from "../context/UserContex";
-import Signup from "./Signup";
-import Login from "./Login";
+
 import Navbar from "./Navbar";
 import SideBarProfile from "./profile/Sidebar";
 const Body = () => {
