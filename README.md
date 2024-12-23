@@ -85,8 +85,10 @@ project-folder
 ├── frontend
 │   ├── src
 │   │   ├── components
-│   │   ├── pages
+│   │   ├── assets
+|   |   ├──context
 │   │   ├── App.js
+│   │   ├── utils
 │   │   └── index.css
 └── README.md
 
