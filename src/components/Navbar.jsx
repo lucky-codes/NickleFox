@@ -28,10 +28,10 @@ const Navbar = () => {
           isMenuOpen ? "active" : ""
         }`}
       >
-        <p className="text-xl font-semibold select">CATALOGUE</p>
-        <p className="text-xl font-semibold select">FASHION</p>
-        <p className="text-xl font-semibold select">FAVOURITE</p>
-        <p className="text-xl font-semibold select">LIFESTYLE</p>
+        <p className="text-xl font-semibold px-5 py-2 select">CATALOGUE</p>
+        <p className="text-xl font-semibold  px-5 py-2 select">FASHION</p>
+        <p className="text-xl font-semibold  px-5 py-2 select">FAVOURITE</p>
+        <p className="text-xl font-semibold  px-5 py-2 select">LIFESTYLE</p>
         <button
           onClick={handleModel}
           className="text-[18px] font-semibold bg-black w-[100.5px] h-[46.5px] rounded-[5.25px] text-white"

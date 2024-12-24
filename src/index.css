@@ -12,10 +12,9 @@
 }
 .select:hover {
   cursor: pointer;
-  padding: 5px;
   color: white;
-  background-color: black;
-  border: 1px solid blue;
+  background-color: green;
+  border: 1px solid ;
   border-radius: 10px;
 }
 .no-scroll {
